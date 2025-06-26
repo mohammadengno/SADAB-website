@@ -459,7 +459,7 @@ nav .logo-wrapper span {
 .team-card p {
   color: var(--copper-primary);
   margin-bottom: 15px;
-  font-size: 16.5px;
+  font-size: 15px;
   font-weight: 600;
   display: block;
   max-width: 100%;
@@ -507,9 +507,10 @@ nav .logo-wrapper span {
   transform-style: preserve-3d;
 }
 
-.team-card:hover .card-inner {
+.team-card.flipped .card-inner {
   transform: rotateY(180deg);
 }
+
 
 .card-front,
 .card-back {
@@ -542,6 +543,27 @@ nav .logo-wrapper span {
 .card-back {
   min-height: 320px; 
 }
+.team-role {
+  font-size: 0.95rem;
+  color: var(--copper-accent);
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  background: rgba(200, 169, 81, 0.08);
+  padding: 4px 10px;
+  border-radius: 16px;
+  display: inline-block;
+  box-shadow: 0 1px 6px rgba(176, 141, 87, 0.08);
+  transition: transform 0.3s ease, background 0.3s ease;
+  letter-spacing: 0.3px;
+}
+.team-card:hover .team-role {
+  transform: scale(1.03);
+  background: rgba(200, 169, 81, 0.15);
+}
+
 
 .goals-section {
   padding: 100px 0;
