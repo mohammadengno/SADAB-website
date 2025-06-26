@@ -11,15 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Fetch and render events
   fetch(sheetUrl)
     .then(response => response.text())
     .then(csvText => {
       const data = Papa.parse(csvText, { header: true }).data;
-
-      // Filter out any empty rows
       const validEvents = data.filter(event => event.title && event.date);
-
-      // Render all events together
       const eventsContainer = document.getElementById('events-list');
       let html = '<ul>';
       validEvents.forEach(event => {
@@ -32,4 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error('حدث خطأ في تحميل الفعاليات:', error);
       document.getElementById('events-list').innerHTML = '<p>تعذر تحميل الفعاليات.</p>';
     });
+
+
+  const teamCards = document.querySelectorAll('.team-card');
+  teamCards.forEach(card => {
+    card.addEventListener('click', (e) => {
+      if (!e.target.closest('a')) {
+        card.classList.toggle('flipped');
+      }
+    });
+  });
 });
+
