@@ -404,14 +404,12 @@ nav .logo-wrapper span {
   font-family: 'Tajawal', sans-serif;
   font-style: oblique;
 }
-
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 30px;
   margin-top: 30px;
 }
-
 .team-card {
   background: var(--copper-card);
   border-radius: 15px;
@@ -424,13 +422,11 @@ nav .logo-wrapper span {
   border: 1px solid rgb(197, 188, 159);
   cursor: pointer;
 }
-
-
 .team-card:hover {
   transform: translateY(-10px);
   box-shadow: 
   -15px 0 30px rgba(212, 175, 55, 0.5),
-   15px 0 30px rgba(212, 175, 55, 0.5); 
+  15px 0 30px rgba(212, 175, 55, 0.5); 
 }
 
 .avatar {
@@ -448,8 +444,6 @@ nav .logo-wrapper span {
   object-fit: cover;
   display: block;
 }
-
-
 .team-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -469,7 +463,6 @@ nav .logo-wrapper span {
   white-space: normal;
   line-height: 1.3;
 }
-
 .social-links {
   display: flex;
   justify-content: center;
@@ -488,7 +481,6 @@ nav .logo-wrapper span {
   text-decoration: none;
   transition: all 0.3s;
 }
-
 .social-links a:hover {
   background: var(--copper-primary);
   color: white;
@@ -498,7 +490,6 @@ nav .logo-wrapper span {
 .team-card {
   perspective: 1000px;
 }
-
 .card-inner {
   position: relative;
   width: 100%;
@@ -523,7 +514,9 @@ nav .logo-wrapper span {
   box-shadow: 0 8px 25px rgba(90, 70, 50, 0.1);
   background: var(--copper-card);
 }
-
+.card-front{
+  position: relative;
+}
 .card-back {
   transform: rotateY(180deg);
   background: var(--copper-bg);
@@ -544,6 +537,7 @@ nav .logo-wrapper span {
   min-height: 320px; 
 }
 .team-role {
+  position: absolute;
   font-size: 0.95rem;
   color: var(--copper-accent);
   font-family: 'Tajawal', sans-serif;
@@ -558,13 +552,14 @@ nav .logo-wrapper span {
   box-shadow: 0 1px 6px rgba(176, 141, 87, 0.08);
   transition: transform 0.3s ease, background 0.3s ease;
   letter-spacing: 0.3px;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .team-card:hover .team-role {
-  transform: scale(1.03);
+  /* transform: scale(1.03); */
   background: rgba(200, 169, 81, 0.15);
 }
-
-
 .goals-section {
   padding: 100px 0;
   background: rgba(245, 241, 232, 0.5);
@@ -921,6 +916,7 @@ footer p {
   .text-section .text-img img{
     display: none;
   }
+  
 }
 
 @media (max-width: 768px) {
