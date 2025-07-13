@@ -8,18 +8,24 @@
   --copper-accent: #c8a951;
   --copper-text: #4a3c2a;
   --copper-gradient: linear-gradient(135deg, #b08d57 0%, #c8a951 100%);
+  --green-1:#054239;
+  --green-2:#002623;
 }
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
-
 img {
   max-width: 100%;
   height: auto;
 }
-
+button{
+  cursor: pointer;
+}
+a{
+  cursor: pointer;
+}
 .container {
   max-width: 100%;
 }
@@ -33,7 +39,7 @@ img {
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: radial-gradient(circle at center, #f5f1e8 30%, #e8e2d6 100%);
+  background: #233d39;
   color: var(--copper-text);
   direction: rtl;
   overflow-x: hidden;
@@ -42,12 +48,12 @@ body {
 
 h1, h2, h3, h4 {
   font-family: 'Cairo', 'Tajawal', sans-serif;
-  color: var(--copper-dark);
+  color: white;
   font-weight: 700;
 }
 
 .copper-highlight {
-  color: var(--copper-primary);
+  color:white;
   position: relative;
   display: inline-block;
 }
@@ -59,7 +65,7 @@ h1, h2, h3, h4 {
   left: 0;
   right: 0;
   height: 3px;
-  background: var(--copper-gradient);
+  background: white;
   border-radius: 2px;
 }
 
@@ -69,17 +75,16 @@ h1, h2, h3, h4 {
   margin: 0 auto;
   padding: 0 15px;
 }
-
 /* navigation */
 nav {
-  background: linear-gradient(135deg, #A97142 0%, #D4AF37 100%);
+  background: var(--green-2);
 
   box-shadow: 0 2px 15px rgba(90, 70, 50, 0.1);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  padding: 15px 0;
+  padding: 5px 0;
 }
 
 nav .container {
@@ -99,6 +104,7 @@ nav .container {
   height: 110px;
   object-fit: contain;
   margin-right: -30px;
+  background-color: var(--green-2);
 }
 
 nav .logo-wrapper span {
@@ -115,13 +121,14 @@ nav .logo-wrapper span {
 
 .nav-links a {
   text-decoration: none;
-  color: var(--copper-dark);
+  color: white;
   font-weight: 600;
   font-size: 1.1rem;
   position: relative;
   transition: color 0.3s;
   font-family: 'Tajawal', sans-serif;
   font-style: oblique;
+  cursor: pointer;
 }
 
 .nav-links a::after {
@@ -138,19 +145,17 @@ nav .logo-wrapper span {
 .nav-links a:hover {
   color: white;
 }
-
 .nav-links a:hover::after {
   width: 100%;
   left: 0;
 }
-
 .mobile-menu-btn {
   display: none;
   font-size: 1.5rem;
   color: black;
   cursor: pointer;
+  
 }
-
 /* header section */
 .hero-section {
   padding: 150px 20px 100px;
@@ -184,22 +189,24 @@ nav .logo-wrapper span {
 }
 
 .hero-content .logo {
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   margin: 0 auto -30px; 
   border-radius: 50%;
   padding: 20px;
   animation: pulseGlow 1s infinite alternate;
 }
 .hero-content .logo-wrapper img{
-  width: 350px;
-  height: 350px;
+  width: 190px;
+  height: 190px;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
+
 
 @keyframes pulseGlow {
   0% { 
     transform: scale(0.98);
-    
   }
   100% { 
     transform: scale(1.02);
@@ -210,7 +217,7 @@ nav .logo-wrapper span {
 .hero-section h1 {
   font-size: 3rem;
   margin-bottom: 20px;
-  color: var(--copper-dark);
+  color: rgb(32, 17, 17);
   line-height: 1.4;
   font-family: 'Noto Kufi Arabic', sans-serif;
 }
@@ -219,7 +226,7 @@ nav .logo-wrapper span {
   font-size: 1.8rem;
   margin-bottom: 35px;
   line-height: 2;
-  color: var(--copper-text);
+  color: var(--green-2);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -227,7 +234,6 @@ nav .logo-wrapper span {
   font-family: 'Helvetica Neue', serif;
   
 }
-
 /* cards section */
 .cards-section {
   padding: 100px 0;
@@ -241,16 +247,14 @@ nav .logo-wrapper span {
   font-style: italic;
   font-weight: 400;
 }
-
 .cards-section .container {
   display: flex;
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
 }
-
 .card {
-  background: var(--copper-card);
+  background: rgba(239, 239, 239, 0.956);
   border-radius: 30px 0 30px 0;
   padding: 35px 30px;
   transition: all 0.4s ease;
@@ -272,18 +276,17 @@ nav .logo-wrapper span {
   height: 0px;
   background: var(--copper-gradient);
 }
-
 .card:hover {
-  transform: translateY(-20px);
-  box-shadow: 0 15px 40px rgba(90, 70, 50, 0.2);
-  border: 2px solid rgba(200, 152, 104, 0.2);
+  transform: translateX(-40px);
+  box-shadow: 0 15px 40px rgba(30, 59, 60, 0.2);
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
 }
 
 .icon-wrapper {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: rgba(176, 141, 87, 0.1);
+  background: rgba(255, 255, 255, 0.421);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -292,13 +295,13 @@ nav .logo-wrapper span {
 
 .icon-wrapper i {
   font-size: 2.5rem;
-  color: var(--copper-primary);
+  color: rgb(39, 56, 52);
 }
 
 .card h2 {
   font-size: 1.9rem;
   margin-bottom: 20px;
-  color: var(--copper-dark);
+  color: var(--green-2);
 }
 
 .card p {
@@ -329,7 +332,7 @@ nav .logo-wrapper span {
 .text-section {
   padding: 100px 0;
   text-align: center;
-  background: rgba(255, 255, 255, 0.971);
+  background:#305f5783;
   position: relative;
   overflow: visible;
 }
@@ -346,24 +349,12 @@ nav .logo-wrapper span {
 
 }
 
-.text-section::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 80px; /* adjust as needed */
-  background-size: cover;
-  z-index: 10;
-  pointer-events: none;
-}
-
-
 .text-section h2 {
   font-size: 2.5rem;
   margin-bottom: 40px;
   font-family: 'Tajawal', sans-serif;
   font-style: oblique;
+  color: white;
 }
 
 .text-section p {
@@ -373,8 +364,8 @@ nav .logo-wrapper span {
   line-height: 1.8;
   font-family: 'Tajawal', sans-serif;
   font-style: oblique;
+  color: white;
 }
-
 /* team section */
 .team-section {
   padding: 100px 0;
@@ -410,8 +401,9 @@ nav .logo-wrapper span {
   gap: 30px;
   margin-top: 30px;
 }
+
 .team-card {
-  background: var(--copper-card);
+  background: rgb(255, 255, 255);
   border-radius: 15px;
   padding: 30px;
   text-align: center;
@@ -419,14 +411,12 @@ nav .logo-wrapper span {
   box-shadow: 0 8px 25px rgba(90, 70, 50, 0.1);
   position: relative;
   overflow: hidden;
-  border: 1px solid rgb(197, 188, 159);
+  
   cursor: pointer;
 }
 .team-card:hover {
   transform: translateY(-10px);
-  box-shadow: 
-  -15px 0 30px rgba(212, 175, 55, 0.5),
-  15px 0 30px rgba(212, 175, 55, 0.5); 
+
 }
 
 .avatar {
@@ -447,13 +437,13 @@ nav .logo-wrapper span {
 .team-card h3 {
   font-size: 1.5rem;
   margin-bottom: 10px;
-  color: var(--copper-dark);
+  color: #054239;
 }
 
 .team-card p {
-  color: var(--copper-primary);
+  color: #054239;
   margin-bottom: 15px;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
   display: block;
   max-width: 100%;
@@ -461,30 +451,7 @@ nav .logo-wrapper span {
   width: 100%;
   word-wrap: break-word;
   white-space: normal;
-  line-height: 1.3;
-}
-.social-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.social-links a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: rgba(176, 141, 87, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--copper-primary);
-  text-decoration: none;
-  transition: all 0.3s;
-}
-.social-links a:hover {
-  background: var(--copper-primary);
-  color: white;
-  transform: translateY(-3px);
+  line-height: 1.4;
 }
 
 .team-card {
@@ -502,7 +469,6 @@ nav .logo-wrapper span {
   transform: rotateY(180deg);
 }
 
-
 .card-front,
 .card-back {
   position: absolute;
@@ -512,21 +478,21 @@ nav .logo-wrapper span {
   overflow: hidden;
   padding: 30px;
   box-shadow: 0 8px 25px rgba(90, 70, 50, 0.1);
-  background: var(--copper-card);
+  background: rgb(241, 241, 241);
+  border: 1px solid rgb(56, 98, 96);
 }
 .card-front{
   position: relative;
 }
 .card-back {
   transform: rotateY(180deg);
-  background: var(--copper-bg);
-  color: var(--copper-text);
+  background: rgb(249, 249, 249);
   text-align: right;
 }
 
 .card-back h4 {
   margin-top: 0;
-  color: var(--copper-dark);
+  color: var(--green-1);
   font-size: 1.4rem;
 }
 
@@ -539,30 +505,31 @@ nav .logo-wrapper span {
 .team-role {
   position: absolute;
   font-size: 0.95rem;
-  color: var(--copper-accent);
+  color: #fdfdfd;
   font-family: 'Tajawal', sans-serif;
   font-weight: 600;
   text-align: center;
   margin-top: 12px;
   margin-bottom: 12px;
-  background: rgba(200, 169, 81, 0.08);
+  background:#054239;
   padding: 4px 10px;
   border-radius: 16px;
   display: inline-block;
   box-shadow: 0 1px 6px rgba(176, 141, 87, 0.08);
-  transition: transform 0.3s ease, background 0.3s ease;
+  transition: transform 0.3s ease, background 0.4s ease;
   letter-spacing: 0.3px;
   bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
 }
+
 .team-card:hover .team-role {
-  /* transform: scale(1.03); */
-  background: rgba(200, 169, 81, 0.15);
+  background: rgba(143, 143, 141, 0.15);
+  color: rgb(49, 49, 49);
 }
 .goals-section {
   padding: 100px 0;
-  background: rgba(245, 241, 232, 0.5);
+  background: #ebebeb;
 }
 
 .goals-section h2 {
@@ -571,6 +538,18 @@ nav .logo-wrapper span {
   margin-bottom: 60px;
   font-family: 'Tajawal', sans-serif;
   font-style: oblique;
+  color: var(--green-2);
+}
+
+.goals-section .copper-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgb(2, 26, 19);
+  border-radius: 2px;
 }
 
 .goals-grid {
@@ -580,7 +559,8 @@ nav .logo-wrapper span {
 }
 
 .goal-card {
-  background: var(--copper-card);
+  background: #002623c3;
+  opacity: 10%;
   border-radius: 40px 0 40px 0;
   padding: 35px 25px;
   text-align: center;
@@ -591,14 +571,11 @@ nav .logo-wrapper span {
   cursor: pointer;
   will-change: transform;
 }
-
 .goal-card:hover {
   transform: translateY(-30px);
   box-shadow: 0 15px 40px rgba(90, 70, 50, 0.2);
-  border: 2px solid rgba(200, 152, 104, 0.2);
-
+  border:inset 2px solid rgb(255, 255, 255);
 }
-
 .goal-icon {
   width: 80px;
   height: 80px;
@@ -609,13 +586,13 @@ nav .logo-wrapper span {
   justify-content: center;
   margin: 0 auto 25px;
   font-size: 2rem;
-  color: var(--copper-primary);
+  color: white;
 }
 
 .goal-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: var(--copper-dark);
+  color:rgb(223, 222, 222);
   font-family: 'Tajawal', sans-serif;
   font-style: oblique;
 }
@@ -626,7 +603,7 @@ nav .logo-wrapper span {
 }
 
 #events {
-  background: rgba(207, 191, 154, 0.4);
+  background: rgba(46, 92, 85, 0.678);
   position: relative;
   overflow: hidden; 
 }
@@ -635,7 +612,7 @@ nav .logo-wrapper span {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to bottom, rgba(245, 241, 232, 0.6), rgba(245, 241, 232, 0.95)),
+    linear-gradient(to bottom, rgba(232, 245, 240, 0.6), rgba(53, 104, 76, 0.95)),
     url('images/blogger-icon-line-connection-circuit-board.jpg');
   background-size: cover;
   background-position: center;
@@ -655,7 +632,7 @@ nav .logo-wrapper span {
 }
 
 #events-list li {
-  background: var(--copper-card);
+  background: white;
   border-radius: 16px;
   padding: 25px 20px 20px;
   border-radius: 40px 0 40px 0;
@@ -669,6 +646,7 @@ nav .logo-wrapper span {
 #events-list li:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 35px rgba(90, 70, 50, 0.2);
+  border: inset 3px solid #002623;
 }
 
 #events-list li strong {
@@ -676,7 +654,7 @@ nav .logo-wrapper span {
   position: absolute;
   top: 15px;
   right: 15px;
-  background: var(--copper-gradient);
+  background: #002623a7;
   color: white;
   padding: 6px 12px;
   border-radius: 12px;
@@ -688,7 +666,7 @@ nav .logo-wrapper span {
 #events-list li {
   padding-top: 50px;
   font-size: 1.1rem;
-  color: var(--copper-text);
+  color: var(--green-2);
   line-height: 1.5;
   text-align: right;
 }
@@ -703,10 +681,12 @@ nav .logo-wrapper span {
   border-radius: 2px;
   opacity: 0.6;
 }
+
 #events > .container > p {
   padding-bottom: 1.5rem; 
   padding-top: 1.5rem;
   font-size: 1.125rem;
+  color: white;
 }
 
 @media (max-width: 576px) {
@@ -728,7 +708,7 @@ nav .logo-wrapper span {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(245, 241, 232, 0.9);
+  background: rgb(16, 43, 29);
   z-index: 1;
 }
 
@@ -737,6 +717,7 @@ nav .logo-wrapper span {
   z-index: 2;
   max-width: 700px;
   margin: 0 auto;
+  
 }
 
 .join-content h2 {
@@ -750,12 +731,13 @@ nav .logo-wrapper span {
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  color: white;
 }
 
 /* contact section */
 .contact-section {
   padding: 100px 0;
-  background: rgba(245, 241, 232, 0.5);
+  background: rgba(54, 89, 76, 0.738);
   text-align: center;
 }
 
@@ -771,14 +753,39 @@ nav .logo-wrapper span {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  color: var(--green-2);
 }
 
 .contact-content p strong {
-  color: var(--copper-primary);
+  color: var(--green-1);
 }
 
 .contact-content p i {
-  color: var(--copper-primary);
+  color: var(--green-2);
+}
+.social-section{
+  padding: 100px 0;
+  background: rgba(255, 255, 255, 0.922);
+  text-align: center;
+}
+.social-section h2 span{
+  color: var(--green-2);
+}
+.social-section .copper-highlight {
+  color:rgb(16, 61, 55);
+  position: relative;
+  display: inline-block;
+}
+
+.social-section .copper-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: rgb(7, 60, 29);
+  border-radius: 2px;
 }
 
 .social-icons {
@@ -796,21 +803,20 @@ nav .logo-wrapper span {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--copper-primary);
+  color: var(--green-1);
   font-size: 1.5rem;
   transition: all 0.3s;
 }
 
 .social-icon:hover {
-  background: var(--copper-primary);
+  background: #0d3a33;
   color: white;
   transform: translateY(-5px);
 }
 
 /* Footer */
 footer {
-  background: var(--copper-dark);
-  color: var(--copper-light);
+  background: var(--green-1);
   padding: 50px 0 30px;
   text-align: center;
 }
@@ -838,12 +844,12 @@ footer {
   font-family: 'Tajawal', sans-serif;
   font-style: italic;
   font-size: 1.2rem;
-  color: var(--copper-light);
+  color: white;
 }
 
 footer p {
   font-size: 1rem;
-  color: rgba(212, 183, 140, 0.8);
+  color: rgba(243, 243, 243, 0.8);
 }
 
 /* Buttons */
@@ -871,18 +877,18 @@ footer p {
 }
 
 .cta-button{
-  background: var(--copper-primary);
+  background: #002623;
   color: white;
   box-shadow: 0 6px 20px rgba(187, 148, 85, 0.4)
 }
 
 .telegram{
-  background: #0088cc;
+  background: #0088ccd3;
   color: white;
   box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4);
 }
 .whatsapp{
-    background: #1DA851;
+    background: #1da850bf;
   color: white;
   box-shadow: 0 6px 20px rgba(29, 168, 81, 0.4);
 }
@@ -894,12 +900,12 @@ footer p {
 
 .cta-button-outline {
   background: transparent;
-  border: 2px solid var(--copper-primary);
-  color: var(--copper-primary);
+  border: 2px solid #002623;
+  color: black;
 }
 
 .cta-button-outline:hover {
-  background: var(--copper-primary);
+  background: #002623;
   color: white;
   transform: translateY(-5px);
 }
@@ -915,8 +921,7 @@ footer p {
   }
   .text-section .text-img img{
     display: none;
-  }
-  
+  } 
 }
 
 @media (max-width: 768px) {
@@ -926,7 +931,7 @@ footer p {
     top: 80px;
     left: 0;
     right: 0;
-    background: rgba(245, 241, 232, 0.95);
+    background: rgba(250, 250, 250, 0.601);
     flex-direction: column;
     padding: 20px;
     gap: 15px;
@@ -938,10 +943,20 @@ footer p {
   
   .nav-links.show {
     display: flex;
+    margin-top: 40px;
+    
+
+  }
+  .nav-links a{
+    color: #002623;
   }
   
   .mobile-menu-btn {
     display: block;
+    
+  }
+  .mobile-menu-btn i{
+    color: white;
   }
   
   .hero-section {
@@ -961,7 +976,6 @@ footer p {
     flex-direction: column;
     align-items: center;
   }
-  
   .card {
     max-width: 100%;
   }
