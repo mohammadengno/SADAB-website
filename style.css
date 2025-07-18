@@ -154,7 +154,7 @@ nav .logo-wrapper span {
   font-size: 1.5rem;
   color: black;
   cursor: pointer;
-  
+
 }
 /* header section */
 .hero-section {
@@ -378,7 +378,7 @@ nav .logo-wrapper span {
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/world.jpeg');
+  background:url('images/world.jpeg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -523,6 +523,7 @@ nav .logo-wrapper span {
   transform: translateX(-50%);
 }
 
+
 .team-card:hover .team-role {
   background: rgba(143, 143, 141, 0.15);
   color: rgb(49, 49, 49);
@@ -557,7 +558,6 @@ nav .logo-wrapper span {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
 }
-
 .goal-card {
   background: #002623c3;
   opacity: 10%;
@@ -602,6 +602,84 @@ nav .logo-wrapper span {
   font-size: 1.1rem;
 }
 
+
+#research {
+  background: rgba(46, 92, 85, 0.678);
+  position: relative;
+  overflow: hidden;
+}
+
+#research::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(232, 245, 240, 0.6), rgba(53, 104, 76, 0.95));
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -30;
+  opacity: 1;
+  filter: brightness(0.98) contrast(1.05);
+}
+#research-list{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#research-list ul {
+  position: relative;
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+}
+
+#research-list a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  background-color: white;
+  width: 190px;
+  height: 160px;
+  border-radius: 40px 0 40px 0;
+  text-align: center;
+  padding: 15px 15px;
+  border-radius: 40px 0 40px 0;
+  background-color:#244d4a;
+  font-style: italic;
+  font-size: 16px;
+  position: relative;
+  box-shadow: 0 6px 25px rgba(90, 70, 50, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  border:  2px solid #fafafa;
+}
+
+#research-list a:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 12px 35px rgba(90, 70, 50, 0.2);
+  border-radius: 0 40px 0 40px ;
+  border: none;
+}
+
+
+#research > .container > p {
+  padding-bottom: 1.5rem;
+  padding-top: 1.5rem;
+  font-size: 1.125rem;
+  color: white;
+}
+
+/************************** */
 #events {
   background: rgba(46, 92, 85, 0.678);
   position: relative;
@@ -922,6 +1000,17 @@ footer p {
   .text-section .text-img img{
     display: none;
   } 
+  .links-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+  }
+  #research-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
 }
 
 @media (max-width: 768px) {
@@ -940,12 +1029,10 @@ footer p {
   .text-section .text-img img{
     display: none;
   }
-  
   .nav-links.show {
     display: flex;
     margin-top: 40px;
-    
-
+  
   }
   .nav-links a{
     color: #002623;
@@ -979,6 +1066,20 @@ footer p {
   .card {
     max-width: 100%;
   }
+  #research-list ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  
+}
+#research-list a{
+  width: 145px; 
+  height: 120px;
+  font-size: 13px;
+  margin-bottom: 20px;
+
+}
+
 }
 
 @media (max-width: 576px) {
@@ -999,6 +1100,37 @@ footer p {
   }
   .team-card p {
   line-height: 1.5;
+}
+.links-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 20px 20px;
+  }
+  .links-container a {
+  width: 115px; 
+  height: 100px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+#research-list ul {
+  position: relative;
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+
+#research-list a{
+  width: 135px; 
+  height: 120px;
+  font-size: 13px;
+  margin-bottom: 20px;
+
 }
 
 }
