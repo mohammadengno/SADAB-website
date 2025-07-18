@@ -1121,13 +1121,13 @@ footer p {
   margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
+  gap: 10px;
 }
 
 
 #research-list a{
-  width: 125px; 
-  height: 110px;
+  width: 100px; 
+  height: 90px;
   font-size: 13px;
   margin-bottom: 20px;
 
